@@ -11,7 +11,9 @@
 <body>
 <a-scene>
   <a-assets>
-    <a-video id="Videito" autoplay loop="true" src="Assets/IA.mp4"></a-video>
+    <video id="Videito" autoplay loop>
+      <source src="Assets/IA.mp4" type="video/mp4">
+    </video>
   </a-assets>
 
   <a-video src="#Videito" width="16" height="9" position="0 1.5 -18"></a-video>
@@ -53,4 +55,3 @@
 </a-scene>
 </body>
 </html>
-
