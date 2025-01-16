@@ -14,6 +14,11 @@
             <a-assets-item id="navmesh" src="Assets//Navmesh.glb"></a-assets-item>
         </a-assets>
 
+        <!-- Player. -->
+      <a-entity id="rig"
+      movement-controls="constrainToNavMesh: true;
+                         controls: checkpoint, gamepad, trackpad, keyboard, nipple;"
+      position="-7 0 21">
 <a-entity camera
         position="0 1.6 0"
         look-controls="pointerLockEnabled: true">
