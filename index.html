@@ -10,8 +10,11 @@
     <a-scene>
     <a-entity geometry="primitive: sphere; radius: 1.5"
           light="type: point; color: white; intensity: 2"
-          material="color: white; shader: flat; src= puntos.jpg"
+          material="color: white; shader: flat; src: puntos.jpg"
           position="0 0 -5"></a-entity>
+          <a-entity id="rig" position="25 10 0">
+            <a-entity id="camera" camera look-controls></a-entity>
+          </a-entity>
     </a-scene>
 </body>
 </html>
