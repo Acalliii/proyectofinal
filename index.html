@@ -9,6 +9,25 @@
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
 </head>
 <body>
+    <script>
+        AFRAME.registerComponent('controlaudio', {
+            init: function () {
+                let botonControl = this.el;
+                botonControl.addEventListener('click', function(ev) {
+                    let metodo = ev.srcElement.id;
+                    console.log(metodo);
+                    let bocina = document.querySelector('#paisaje');
+                    if (metodo == "play") {
+                        bocina.components.sound.playSound();
+                    } else if (metodo == "pause") {
+                        bocina.components.sound.pauseSound();
+                    } else if (metodo == "stop") {
+                        bocina.components.sound.stopSound();
+                    }
+                });
+            }
+        });
+    </script>
     <a-scene>
         <a-assets>
             <a-assets-item id="navmesh" src="Assets//Navmesh.glb"></a-assets-item> </a-assets>
