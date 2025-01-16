@@ -30,6 +30,18 @@
     </script>
     <a-scene>
         <a-assets>
+            <audio id="viento" src="Assets/Assets/Viento.mp3" preload="auto"></audio>
+        </a-assets>
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+        <a-entity id="viento1" geometry="primitive: plane" material="color: blue"
+          position="0 1 -4" sound="src: #viento;"></a-entity>
+
+        <a-box id="play" color="red" position="-1 0.2 -4" scale="0.3 0.3 0.3" controlaudio></a-box>
+        <a-box id="pause" color="black" position="0 0.2 -4" scale="0.3 0.3 0.3" controlaudio></a-box>
+        <a-box id="stop" color="violet" position="1 0.2 -4" scale="0.3 0.3 0.3" controlaudio></a-box>
+        <a-assets>
             <a-assets-item id="navmesh" src="Assets//Navmesh.glb"></a-assets-item> </a-assets>
       <a-entity id="rig"
       movement-controls="constrainToNavMesh: true;
@@ -40,7 +52,7 @@
         look-controls="pointerLockEnabled: true">
 <a-cursor></a-cursor>
 </a-entity>
-</a-entity>
+
 
 <!-- Nav mesh. -->
 <a-entity nav-mesh
