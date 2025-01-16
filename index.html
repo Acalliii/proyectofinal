@@ -11,26 +11,13 @@
 <body>
 
     <a-scene>
-            <a-assets-item id="navmesh" src="Assets/Navmesh.glb"></a-assets-item> </a-assets>
-      <a-entity id="rig"
-      movement-controls="constrainToNavMesh: true;
-                         controls: checkpoint, gamepad, trackpad, keyboard, nipple;"
-      position="-7 0 21"></a-entity>
-<a-entity camera
-        position="0 1.6 0"
-        look-controls="pointerLockEnabled: true">
-<a-cursor></a-cursor>
-</a-entity>
+       
 
 
-<!-- Nav mesh. -->
-<a-entity nav-mesh
-normal-material
-visible="false"
-position="0 0 -5"
-gltf-model="#navmesh"></a-entity>
+
+
     <a-entity 
-    geometry="primitive:triangle" 
+    geometry="primitive:cone" 
     material="color: purple" 
     light="type: ambient; intensity: 0.5 " 
     position="1 2 3"></a-entity>
