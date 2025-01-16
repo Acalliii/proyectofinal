@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto final</title>
+</head>
+<body>
+  <a-entity id="rig"
+    movement-controls="constrainToNavMesh: true; controls: checkpoint, gamepad, trackpad, keyboard, nipple;"
+    position="-7 0 21">
+    <a-entity camera
+      position="0 1.6 0"
+      look-controls="pointerLockEnabled: false">
+      <a-cursor></a-cursor>
+    </a-entity>
+  </a-entity>
 
+  <a-entity nav-mesh
+    normal-material
+    visible="false"
+    position="0 0 -5"
+    gltf-model="#navmesh"></a-entity>
+
+  <a-entity
+    geometry="primitive: cone"
+    material="color: purple"
+    light="type: ambient; intensity: 0.5"
+    position="1 2 3"></a-entity>
+  <a-entity
+    geometry="Light Bulb"
+    material="color: coral"
+    light="type: ambient; intensity: 0.5"
+    position="1 4 1"></a-entity>
+  <a-entity geometry="primitive: sphere; radius: 1.5"
+    light="type: point; color: white; intensity: 2"
+    material="color: white; shader: flat; src: puntos.jpg"
+    position="0 0 -5"></a-entity>
+</body>
+</html>
